@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Commande - Cosmétiques Naturels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+         <div class="message">
+            <h1> Merci pour votre commande</h1>
+            <p> Nous l'avons bien recu et vous contacterons tres bientot.</p>
+            <a href="index.html"> Retour a l'Accueil</a>
+            <a href="commande.html">Commander</a>
+         </div>
+        </nav>
+    </header>
+
+     <form action="merci.html" method="post">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" required>
+
+            <label for="produit">Produit souhaité</label>
+            <select id="produit" name="produit" required>
+                <option value="">-- Choisissez un produit --</option>
+                <option value="savon_charbon">Savon au charbon</option>
+                <option value="savon_miel">Savon au miel</option>
+                <option value="massage_relaxant">Massage relaxant</option>
+                <option value="massage_huile">Massage aux huiles</option>
+                <option value="coiffure_degrade">Coupe dégradée</option>
+                <option value="barbe">Soin barbe</option>
+            </select>
+
+            <label for="message">Message ou précision (facultatif)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ex. : Livraison souhaitée, allergies, préférences, etc."></textarea>
+
+            <input type="submit" value="Envoyer la commande">
+        </form>
+    <footer>
+        <p>© 2025 Cosmétiques Naturels</p>
+    </footer>
+    <script>
+    document.getElementById("formulaire-commande").addEventListener("submit", function(event){
+        event.preventDefault();
+
+        const nom = document.getElementById("nom").value;
+        const tel = document.getElementById("telephone").value;
+        const produit = document.getElementById("produit").value;
+        const message = document.getElementById("message").value;
+
+        const texte = `Bonjour, je souhaite passer une commande :%0A
+Nom : ${nom}%0A
+Téléphone : ${tel}%0A
+Produit : ${produit}%0A
+Message : ${message}`;
+
+        // 🔁 Remplace le numéro par ton numéro WhatsApp (avec l'indicatif international, sans le +)
+        const numero = "22896526985";
+
+        window.open(https://wa.me/${22896526985}?text=${texte},'_blank');
+    });
+</script>
+</body>
+</html>

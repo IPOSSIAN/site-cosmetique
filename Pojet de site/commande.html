@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Commande - Cosmétiques Naturels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulaire de Commande</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="commande.html">Commander</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="traitement_commande.php" method="post">
+            <label>Nom complet :
+                <input type="text" name="nom" required>
+            </label><br>
+
+            <label>Email :
+                <input type="email" name="email" required>
+            </label><br>
+
+            <label>Téléphone :
+                <input type="tel" name="telephone" required>
+            </label><br>
+
+            <label>Produit souhaité :
+                <select name="produit">
+                    <option value="savon_aloes">Savon à l'Aloès</option>
+                    <option value="creme_karite">Crème au Karité</option>
+                    <option value="huile_coco">Huile de Coco</option>
+                </select>
+            </label><br>
+
+            <label>Quantité :
+                <input type="number" name="quantite" min="1" value="1">
+            </label><br>
+
+            <label>Adresse de livraison :
+                <textarea name="adresse" rows="4" required></textarea>
+            </label><br>
+
+            <button type="submit">Envoyer la commande</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Cosmétiques Naturels</p>
+    </footer>
+</body>
+</html>
+Formulaire

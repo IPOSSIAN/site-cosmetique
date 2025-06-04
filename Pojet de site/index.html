@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil - Cosmétiques Naturels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur notre site de cosmétiques naturels</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="commande.html">Commander</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="into-cosmetologie">
+            <h2>Bienvenue dans l'univer de la cosmétologie</h2>
+            <p>
+                 La cosmétologie, c’est l’art de prendre soin de soi avec science et douceur. Elle associe beauté,
+        bien-être et innovation pour révéler l’éclat naturel de chacun. Entre soins du visage, maquillage, 
+        parfums ou massages, chaque geste devient un rituel qui nourrit la peau, apaise l’esprit et sublime 
+        la personnalité. Offrez à votre corps ce qu’il y a de meilleur, naturellement.
+
+            </p>
+        </section>
+        <section class="galerie">
+            <h2>Nos Produits</h2>
+            <img src="66.jpg" alt="Savon naturel">
+            <img src="OIP(4).jpg" alt="Crème de beauté">
+        </section>
+
+        <section>
+            <h2>Nos Services de Massage</h2>
+            <img src="OIP (1).jpg" alt="Massage relaxant">
+            <img src="télécharger.jpg" alt="Massage aux huiles essentielles">
+        </section>
+
+        <button class="btn-catalogue" onclick="afficherCatalogue">Voir le catalogue</button>
+
+        <section class="catalogue">
+            <h2> Decouvrez nos produit</h2>
+        </section>
+
+        <section class="catalogue">
+        <h2>Nos Savons</h2>
+        <div class="grille">
+            <div>
+                <img src="20.jpg" alt="Savon 1">
+                <p>Savon au charbon</p>
+            </div>
+            <div>
+                <img src="50.jpg" alt="Savon 2">
+                <p>Savon au miel</p>
+            </div>
+            <div>
+                <img src="72.jpg" alt="Savon 3">
+                <p>Savon à l'aloe vera</p>
+            </div>
+        </div>
+
+        <h2>Massages</h2>
+        <div class="grille">
+            <div>
+                <img src="the art of relaxation.jpg" alt="Massage 1">
+                <p>Massage relaxant</p>
+            </div>
+            <div>
+                <img src="14.jpg" alt="Massage 2">
+                <p>Massage aux huiles essentielles</p>
+            </div>
+            <div>
+                <img src="15.jpg" alt="Massage 3">
+                <p>Massage facial</p>
+            </div>
+        </div>
+
+        <h2>Barber Shop</h2>
+        <div class="grille">
+            <div>
+                <img src="OIP (2).jpg" alt="Coiffure 1">
+                <p>tresse anagoda</p>
+            </div>
+            <div>
+                <img src="OIP.jpg" alt="Coiffure 2">
+                <p>tresse anagoda sur le cotes</p>
+            </div>
+            <div>
+                <img src="1.jpg" alt="Coiffure 3">
+                <p>Coiffure moderne</p>
+            </div>
+            <div>
+                <img src="R.jpg" alt="Coiffure 4">
+                <p> Rasage choco </p>
+            </div>
+        </div>
+        <button class="btn-fermer" onclick="fermerCatalogue()">Fermer le catalogue</button>
+    </section>
+
+        <section style="text-align: center; margin: 40px;">
+            <a href="commande.html">
+                <button style="padding: 15px 30px; font-size: 18px; background-color: #78c2ad; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    commander maintenant
+                </button>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Cosmétiques Naturels</p>
+    </footer>
+
+    <script>
+        function afficherCatalogue() {
+            document.getElementById("catalogue").style.display = "block"; 
+        }
+        function fermerCatalogue() {
+            document.getElementById("catalogue").style.display = "none";
+        }
+    </script>
+</body>
+</html>
