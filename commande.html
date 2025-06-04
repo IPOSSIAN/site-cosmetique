@@ -46,6 +46,32 @@
 
             <button type="submit">Envoyer la commande</button>
         </form>
+        <form onsubmit="sendToWhatsApp(); return false;">
+  <label>Nom :</label><br>
+  <input type="text" id="nom" required><br>
+
+  <label>Produit :</label><br>
+  <input type="text" id="produit" required><br>
+
+  <label>Quantité :</label><br>
+  <input type="number" id="quantite" required><br><br>
+
+  <button type="submit">Commander sur WhatsApp</button>
+</form>
+
+<script>
+  function sendToWhatsApp() {
+    var nom = document.getElementById("nom").value;
+    var produit = document.getElementById("produit").value;
+    var quantite = document.getElementById("quantite").value;
+
+    var numero = "22896526985"; // Remplace par TON numéro WhatsApp
+    var message = Bonjour, je m'appelle ${nom} et je souhaite commander ${quantite} x ${produit}.;
+
+    var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+  }
+</script>
     </main>
 
     <footer>
@@ -53,4 +79,3 @@
     </footer>
 </body>
 </html>
-Formulaire
